@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Header.css"
-import { createTheme, TextField, ThemeProvider } from "@material-ui/core";
+import { createTheme, TextField, ThemeProvider, MenuItem } from "@material-ui/core";
+import categories from './data/category.js';
 
 const Header = ({ LightTheme }) => {
 
@@ -28,6 +29,11 @@ const Header = ({ LightTheme }) => {
                         label="Language"
                         className="select"
                     >
+                        {categories.map((option) => (
+                            <MenuItem key={option.label} value={option.label}>
+                                {option.value}
+                            </MenuItem>
+                        ))}
                     </TextField>
                 </ThemeProvider>
             </div>
