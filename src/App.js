@@ -26,6 +26,7 @@ function App() {
 
   useEffect(() => {
     dictionaryApi();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [word, category]);
   
   console.log(meanings);
