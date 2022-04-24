@@ -27,6 +27,8 @@ function App() {
   useEffect(() => {
     dictionaryApi();
   }, [word, category]);
+  
+  console.log(meanings);
 
   const PurpleSwitch = withStyles({
     switchBase: {
@@ -60,15 +62,24 @@ function App() {
           justifyContent: "space-evenly",
         }}>
         <div
-          style={{ position: "absolute", top: 0, right: 15, paddingTop: 10 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 15,
+            paddingTop: 10
+          }}
         >
-          <span>{LightTheme ? "Dark" : "Light"} Mode</span>
+          <span>{
+            LightTheme ? "Dark" : "Light"
+          } Mode
+          </span>
           <PurpleSwitch
             checked={LightTheme}
             onChange={() => setLightTheme(!LightTheme)}
           />
         </div>
-        <Header setWord={setWord}
+        <Header
+          setWord={setWord}
           category={category}
           setCategory={setCategory}
           word={word}

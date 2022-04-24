@@ -25,7 +25,7 @@ const Definition = ({ meanings, word, LightTheme, category }) => {
                 <span className='subTitle'>Give a search....!!!</span>
             ) : (
                 meanings.map((meaning) =>
-                    meaning.meanings.map((item) =>
+                    meaning.meanings.map((item) => (
                         item.definitions.map((definition) => (
                             <div
                                 className='singleMean'
@@ -48,7 +48,7 @@ const Definition = ({ meanings, word, LightTheme, category }) => {
                             </div>
                         ))
                     )
-                )
+                ))
             )}
         </div>
     );
