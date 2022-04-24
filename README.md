@@ -4,7 +4,7 @@ _A responsive app that uses the Dictionary API to provide definitions in 13 lang
 
 <br/>
 
-**Link to the Web App:** [https://word-hunt-now.netlify.app/](https://word-hunt-now.netlify.app/)
+**Link to the Web App:** [https://word-web.netlify.app/](https://word-web.netlify.app/)
 
 <br/>
 

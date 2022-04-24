@@ -1,7 +1,8 @@
 import React from 'react'
 import "./Header.css"
-import { createTheme, TextField, ThemeProvider, MenuItem } from "@material-ui/core";
+import { createTheme, TextField, ThemeProvider, MenuItem, Typography} from "@material-ui/core";
 import categories from './data/category.js';
+import Gitlink from "./GitLink";
 
 const Header = ({ category, setCategory, word, setWord, meanings, setMeanings, LightTheme }) => {
 
@@ -23,6 +24,9 @@ const Header = ({ category, setCategory, word, setWord, meanings, setMeanings, L
     return (
         <div className='header'>
             <span className='title'>{word ? word: "Word Web"}</span>
+            <Typography className="mt-3">Source Code can be found at:</Typography>
+            <Gitlink theme={darkTheme}/>
+            <br />
             <div className='inputs'>
                 <ThemeProvider theme={darkTheme}>
                     <TextField
