@@ -8,6 +8,9 @@ function App() {
 
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
+  const [category, setCategory] = useState("en");
+  const [LightTheme, setLightTheme] = useState(false);
+
   const dictionaryApi = async () => {
     try {
       const data = await axios.get(
@@ -28,7 +31,13 @@ function App() {
   return (
     <div className="App" style={{ height: '100vh', backgroundColor: '#282c34', color: 'white' }}>
       <Container maxWidth="md" style={{ display: 'flex', flexDirection: "column", height: '100vh' }}>
-        <Header />
+        <Header setWord={setWord}
+          category={category}
+          setCategory={setCategory}
+          word={word}
+          setMeanings={setMeanings}
+          LightTheme={LightTheme}
+        />
       </Container>
     </div>
   );
